@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Number operations</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,254,255,1) 100%);
+
+        }
+        h1{
+            background-color: aqua;
+            height: 5vmax;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: cursive;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           
+        }
+        .inputbox{
+            margin-top: 2vmax;
+            width: 20%;
+            height: 3vmax;
+            
+        }
+        .btn{
+            margin-top: 3vmax;
+            width: 5vmax;
+            height: 4vmax;
+            background-color: crimson;
+            color: white;
+            outline: none;
+            border-radius: 5px;
+        }
+        .btn:hover{
+            background-color: blue;
+        }
+        .answer{
+            font-size: 2vmax;
+            margin-top: 3vmax;
+            background-color: whitesmoke;
+            text-align: center;
+        }
+        .span{
+            color: red;
+        }
+
+        @media(max-width:500px) {
+            h1{
+                height: 10vmax;
+                font-size: 20px;
+            }
+            .inputbox{
+                width: 90%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>User Friendly Calculator</h1>
+    <div class="container">
+        <input type="number" placeholder="Enter Your First Number" class="inputbox" id="one">
+        <input type="Number" placeholder="Enter Your First Number" class="inputbox" id="two">
+        <div class="btnc">
+        <input type="submit" value="Sub" onclick="sub();" class="btn">
+        <input type="submit" value="Add" onclick="add();" class="btn">
+        <input type="submit" value="Mul" onclick="mul();" class="btn">
+        <input type="submit" value="Div" onclick="div();" class="btn">
+        <p class="answer">Your Answer is:<span class="span"></span></p>
+    </div>
+    </div>
+
+    <script>
+           
+        function sub(){
+            var firstnum=document.getElementById('one').value;
+            var secondnum=document.getElementById('two').value;
+              const a = firstnum-secondnum;
+              document.querySelector(".span").innerHTML=(a);
+        }
+
+        function add(){
+            var firstnum=document.getElementById('one').value;
+            var secondnum=document.getElementById('two').value;
+              const a = firstnum+secondnum;
+              document.querySelector(".span").innerHTML=(a);
+        }
+
+        function mul(){
+            var firstnum=document.getElementById('one').value;
+            var secondnum=document.getElementById('two').value;
+              const a = firstnum*secondnum;
+              document.querySelector(".span").innerHTML=(a);
+        }
+
+        function div(){
+            var firstnum=document.getElementById('one').value;
+            var secondnum=document.getElementById('two').value;
+              const a = firstnum/secondnum;
+              document.querySelector(".span").innerHTML=(a);
+        }
+
+        
+     
+    </script>
+    
+</body>
+</html>
